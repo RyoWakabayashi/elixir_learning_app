@@ -1,7 +1,7 @@
 {
   "enabled": true,
   "name": "Run Tests",
-  "description": "Executes 'mix test' when a task is completed and fixes any errors that occur",
+  "description": "Executes 'mix test' and fixes any errors that occur",
   "version": "1",
   "when": {
     "type": "userTriggered",
@@ -9,6 +9,6 @@
   },
   "then": {
     "type": "askAgent",
-    "prompt": "I notice you've made changes to the codebase. Let me run the tests to check if everything is working correctly.\n\nPlease run `mix test` and check the results. If there are any test failures, I'll help you fix them.\n\nIf there are test failures, please:\n1. Analyze the error messages carefully\n2. Identify the root cause of each failure\n3. Suggest specific code changes to fix the issues\n4. Explain why these changes will resolve the problems\n\nLet's make sure all tests pass before moving on to the next task."
+    "prompt": "I notice you've made changes to the codebase. Let me run the tests to check if everything is working correctly.\n\nPlease run `export MIX_ENV=test`, `mix test` and check the results. If there are any test failures, I'll help you fix them.\n\nIf there are test failures, please:\n1. Analyze the error messages carefully\n2. Identify the root cause of each failure\n3. Suggest specific code changes to fix the issues\n4. Explain why these changes will resolve the problems\n\nLet's make sure all tests pass before moving on to the next task."
   }
 }

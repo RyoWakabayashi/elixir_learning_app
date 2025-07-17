@@ -32,7 +32,7 @@ defmodule ElixirLearningApp.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:tidewave, "~> 0.2", only: [:dev]},
+      {:tidewave, "~> 0.2", only: :dev, runtime: false},
       {:phoenix, "~> 1.7.20"},
       {:phoenix_ecto, "~> 4.5"},
       {:ecto_sql, "~> 3.10"},
@@ -58,7 +58,9 @@ defmodule ElixirLearningApp.MixProject do
       {:gettext, "~> 0.26"},
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
-      {:bandit, "~> 1.5"}
+      {:bandit, "~> 1.5"},
+      {:phoenix_test, "~> 0.5", only: :test, runtime: false},
+      {:phoenix_test_playwright, "~> 0.5", only: :test, runtime: false}
     ]
   end
 

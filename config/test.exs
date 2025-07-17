@@ -18,7 +18,7 @@ config :elixir_learning_app, ElixirLearningApp.Repo,
 config :elixir_learning_app, ElixirLearningAppWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
   secret_key_base: "/VssKDYJDCL0x/aUKhMl9gTocvlbIBg+GSAktu6F1dd0KPcWRdrSvqCbvkRi/SDy",
-  server: false
+  server: true
 
 # In test we don't send emails
 config :elixir_learning_app, ElixirLearningApp.Mailer, adapter: Swoosh.Adapters.Test
@@ -35,3 +35,16 @@ config :phoenix, :plug_init_mode, :runtime
 # Enable helpful, but potentially expensive runtime checks
 config :phoenix_live_view,
   enable_expensive_runtime_checks: true
+
+config :phoenix_test, :endpoint, ElixirLearningAppWeb.Endpoint
+
+config :phoenix_test,
+  otp_app: :my_app,
+  playwright: [
+    cli: "assets/node_modules/playwright/cli.js",
+    browser: :chromium,
+    headless: false,
+    trace: true,
+    trace_dir: "tmp"
+  ],
+  timeout_ms: 2000
