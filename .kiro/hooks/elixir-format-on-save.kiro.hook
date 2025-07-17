@@ -1,0 +1,17 @@
+{
+  "enabled": true,
+  "name": "Elixir Format on Save",
+  "description": "Runs mix format when Elixir files are saved to maintain consistent code style",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "**/*.ex",
+      "**/*.exs"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "An Elixir file was saved. Running `mix format` to ensure consistent code formatting."
+  }
+}
