@@ -24,7 +24,7 @@ defmodule ElixirLearningAppWeb.HomeLive do
           <p class="text-gray-600 mb-4">
             {gettext("Start your journey with the fundamentals of Elixir programming language")}
           </p>
-          <a href="#" class="text-brand hover:text-brand-dark font-medium">
+          <a href={~p"/#{@locale}/lessons"} class="text-brand hover:text-brand-dark font-medium">
             {gettext("Start Learning")} →
           </a>
         </div>
@@ -34,7 +34,7 @@ defmodule ElixirLearningAppWeb.HomeLive do
           <p class="text-gray-600 mb-4">
             {gettext("Master one of Elixir's most powerful features for elegant code")}
           </p>
-          <a href="#" class="text-brand hover:text-brand-dark font-medium">
+          <a href={~p"/#{@locale}/lessons"} class="text-brand hover:text-brand-dark font-medium">
             {gettext("Start Learning")} →
           </a>
         </div>
@@ -44,7 +44,7 @@ defmodule ElixirLearningAppWeb.HomeLive do
           <p class="text-gray-600 mb-4">
             {gettext("Build interactive web applications with Phoenix LiveView")}
           </p>
-          <a href="#" class="text-brand hover:text-brand-dark font-medium">
+          <a href={~p"/#{@locale}/lessons"} class="text-brand hover:text-brand-dark font-medium">
             {gettext("Start Learning")} →
           </a>
         </div>

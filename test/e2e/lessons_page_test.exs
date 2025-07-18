@@ -25,6 +25,49 @@ defmodule ElixirLearningAppWeb.LessonsPageTest do
     |> assert_has("h2", text: "Phoenix LiveView")
   end
 
+  test "lesson cards display correctly", %{conn: conn} do
+    conn
+    |> visit("/en/lessons")
+    # 基本カテゴリのレッスンカードを確認
+    |> assert_has("h3", text: "Variables & Types")
+    |> assert_has("h3", text: "Functions")
+    |> assert_has("h3", text: "Modules")
+
+    # 難易度ラベルが表示されていることを確認
+    |> assert_has("span", text: "Beginner")
+    |> assert_has("span", text: "Easy")
+    |> assert_has("span", text: "Intermediate")
+  end
+
+  test "lesson navigation works", %{conn: conn} do
+    conn
+    |> visit("/en/lessons")
+    # レッスンの「Start Lesson」リンクが存在することを確認
+    |> assert_has("a", text: "Start Lesson")
+  end
+
+  test "lesson filtering works", %{conn: conn} do
+    conn
+    |> visit("/en/lessons")
+    # 各カテゴリに対応するレッスンが表示されていることを確認
+
+    # Elixir Basicsカテゴリには「Variables & Types」が含まれる
+    |> assert_has("h2", text: "Elixir Basics")
+    |> assert_has("h3", text: "Variables & Types")
+
+    # Pattern Matchingカテゴリには「Basic Pattern Matching」が含まれる
+    |> assert_has("h2", text: "Pattern Matching")
+    |> assert_has("h3", text: "Basic Pattern Matching")
+
+    # Processes & OTPカテゴリには「Introduction to Processes」が含まれる
+    |> assert_has("h2", text: "Processes & OTP")
+    |> assert_has("h3", text: "Introduction to Processes")
+
+    # Phoenix LiveViewカテゴリには「LiveView Basics」が含まれる
+    |> assert_has("h2", text: "Phoenix LiveView")
+    |> assert_has("h3", text: "LiveView Basics")
+  end
+
   test "language content is displayed correctly on lessons page", %{conn: conn} do
     # 英語のレッスンページを確認
     conn

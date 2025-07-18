@@ -1,0 +1,17 @@
+{
+  "enabled": true,
+  "name": "E2Eテスト監視と改善",
+  "description": "LiveViewの実装とE2Eテストの整合性を確認し、必要に応じてテストを改善します",
+  "version": "1",
+  "when": {
+    "type": "userTriggered",
+    "patterns": [
+      "lib/elixir_learning_app_web/live/*.ex",
+      "test/e2e/*.exs"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "1. 変更されたファイルを確認してください\n2. LiveViewの実装（lib/elixir_learning_app_web/live/）とE2Eテスト（test/e2e/）の整合性を分析してください\n3. 必要に応じてE2Eテストを追加、修正してください\n4. `MIX_ENV=test && mix test` を実行して、テストの結果を確認してください\n5. エラーがある場合は修正方法を提案してください\n6. 全ての回答は日本語で行ってください"
+  }
+}

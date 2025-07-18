@@ -22,6 +22,8 @@ defmodule ElixirLearningAppWeb.AboutPageTest do
     |> assert_has("h2", text: "Our Mission")
     # Verify features section
     |> assert_has("h2", text: "Features")
+    # Verify technology section
+    |> assert_has("h2", text: "Technology")
   end
 
   test "navigation from about page works", %{conn: conn} do
