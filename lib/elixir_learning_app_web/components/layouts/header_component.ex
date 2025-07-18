@@ -1,4 +1,7 @@
 defmodule ElixirLearningAppWeb.Layouts.HeaderComponent do
+  @moduledoc """
+  Component for rendering the application header with navigation and language selector.
+  """
   use ElixirLearningAppWeb, :html
 
   alias Phoenix.LiveView.JS

@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "Elixir Format and Credo Check",
+  "description": "Runs mix format and mix credo --strict when Elixir files are saved, and fixes any issues found",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "**/*.{ex,exs}"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A file has been saved. Please:\n1. Run `MIX_ENV=test mix format` to format the code\n2. Run `MIX_ENV=test mix credo --strict` to perform static analysis\n3. If any issues are found, fix them and explain what was changed"
+  }
+}

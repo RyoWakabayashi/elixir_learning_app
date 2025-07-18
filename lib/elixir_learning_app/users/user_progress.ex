@@ -1,4 +1,7 @@
 defmodule ElixirLearningApp.Users.UserProgress do
+  @moduledoc """
+  Schema for tracking user progress through lessons, including completion status and code attempts.
+  """
   use Ecto.Schema
   import Ecto.Changeset
   alias ElixirLearningApp.Lessons.Lesson

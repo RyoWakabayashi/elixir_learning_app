@@ -4,8 +4,8 @@ defmodule ElixirLearningApp.I18n.TranslationManager do
   """
 
   import Ecto.Query, warn: false
-  alias ElixirLearningApp.Repo
   alias ElixirLearningApp.I18n.Translation
+  alias ElixirLearningApp.Repo
 
   @supported_locales ["en", "ja"]
 

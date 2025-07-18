@@ -11,8 +11,8 @@ defmodule ElixirLearningAppWeb.Layouts do
   use ElixirLearningAppWeb, :html
 
   # Import header and footer components
-  alias ElixirLearningAppWeb.Layouts.HeaderComponent
   alias ElixirLearningAppWeb.Layouts.FooterComponent
+  alias ElixirLearningAppWeb.Layouts.HeaderComponent
 
   # Re-export header and footer functions
   defdelegate page_header(assigns), to: HeaderComponent, as: :header

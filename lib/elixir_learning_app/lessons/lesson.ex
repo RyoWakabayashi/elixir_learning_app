@@ -1,4 +1,7 @@
 defmodule ElixirLearningApp.Lessons.Lesson do
+  @moduledoc """
+  Schema for lessons in the application, including content, difficulty, and navigation references.
+  """
   use Ecto.Schema
   import Ecto.Changeset
   alias ElixirLearningApp.Users.UserProgress

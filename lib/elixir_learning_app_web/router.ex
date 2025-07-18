@@ -22,47 +22,11 @@ defmodule ElixirLearningAppWeb.Router do
       Application.get_env(:elixir_learning_app, ElixirLearningAppWeb.Gettext)[:default_locale] ||
         "en"
 
-    # Check if locale is provided in the query parameters
+    # Determine locale from various sources in order of priority
     locale =
-      cond do
-        # First priority: URL parameter
-        conn.params["locale"] && conn.params["locale"] in supported_locales ->
-          conn.params["locale"]
-
-        # Second priority: Session
-        get_session(conn, :locale) && get_session(conn, :locale) in supported_locales ->
-          get_session(conn, :locale)
-
-        # Third priority: Browser Accept-Language header
-        true ->
-          # Extract Accept-Language header and parse it
-          accept_language =
-            List.first(Plug.Conn.get_req_header(conn, "accept-language") || []) || ""
-
-          # Parse the Accept-Language header to get preferred languages
-          preferred_locales =
-            accept_language
-            |> String.split(",")
-            |> Enum.map(fn lang ->
-              case String.split(lang, ";") do
-                [lang_code | _] -> String.trim(lang_code)
-                _ -> nil
-              end
-            end)
-            |> Enum.reject(&is_nil/1)
-            |> Enum.map(fn lang ->
-              # Handle both "ja-JP" format and "ja" format
-              case String.split(lang, "-") do
-                [lang_code | _] -> lang_code
-                _ -> lang
-              end
-            end)
-
-          # Find the first supported locale from the browser preferences
-          Enum.find(preferred_locales, default_locale, fn lang ->
-            lang in supported_locales
-          end)
-      end
+      get_locale_from_params(conn, supported_locales) ||
+        get_locale_from_session(conn, supported_locales) ||
+        get_locale_from_header(conn, supported_locales, default_locale)
 
     # Set the Gettext locale
     Gettext.put_locale(ElixirLearningAppWeb.Gettext, locale)
@@ -71,6 +35,59 @@ defmodule ElixirLearningAppWeb.Router do
     conn
     |> put_session(:locale, locale)
     |> assign(:locale, locale)
+  end
+
+  # Get locale from URL parameters if available and supported
+  defp get_locale_from_params(conn, supported_locales) do
+    if conn.params["locale"] && conn.params["locale"] in supported_locales do
+      conn.params["locale"]
+    end
+  end
+
+  # Get locale from session if available and supported
+  defp get_locale_from_session(conn, supported_locales) do
+    locale = get_session(conn, :locale)
+    if locale && locale in supported_locales, do: locale
+  end
+
+  # Get locale from Accept-Language header
+  defp get_locale_from_header(conn, supported_locales, default_locale) do
+    # Extract Accept-Language header
+    accept_language =
+      List.first(Plug.Conn.get_req_header(conn, "accept-language") || []) || ""
+
+    # Parse the Accept-Language header to get preferred languages
+    preferred_locales = parse_accept_language_header(accept_language)
+
+    # Find the first supported locale from the browser preferences
+    Enum.find(preferred_locales, default_locale, fn lang ->
+      lang in supported_locales
+    end)
+  end
+
+  # Parse the Accept-Language header into a list of language codes
+  defp parse_accept_language_header(accept_language) do
+    accept_language
+    |> String.split(",")
+    |> Enum.map(&extract_language_code/1)
+    |> Enum.reject(&is_nil/1)
+    |> Enum.map(&normalize_language_code/1)
+  end
+
+  # Extract the language code from a language-quality pair
+  defp extract_language_code(lang_quality) do
+    case String.split(lang_quality, ";") do
+      [lang_code | _] -> String.trim(lang_code)
+      _ -> nil
+    end
+  end
+
+  # Normalize language code to base language (e.g., "ja-JP" -> "ja")
+  defp normalize_language_code(lang) do
+    case String.split(lang, "-") do
+      [lang_code | _] -> lang_code
+      _ -> lang
+    end
   end
 
   pipeline :api do

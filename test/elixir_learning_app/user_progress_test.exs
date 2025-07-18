@@ -1,8 +1,8 @@
 defmodule ElixirLearningApp.UserProgressTest do
   use ElixirLearningApp.DataCase
 
-  alias ElixirLearningApp.Users.UserProgressManager
   alias ElixirLearningApp.Lessons
+  alias ElixirLearningApp.Users.UserProgressManager
 
   describe "user_progress" do
     @user_id "user123"

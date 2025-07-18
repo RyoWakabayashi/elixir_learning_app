@@ -4,8 +4,8 @@ defmodule ElixirLearningApp.Lessons do
   """
 
   import Ecto.Query, warn: false
-  alias ElixirLearningApp.Repo
   alias ElixirLearningApp.Lessons.Lesson
+  alias ElixirLearningApp.Repo
 
   @doc """
   Returns the list of lessons.

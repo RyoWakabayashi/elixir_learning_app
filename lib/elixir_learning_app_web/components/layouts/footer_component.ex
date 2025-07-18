@@ -1,4 +1,7 @@
 defmodule ElixirLearningAppWeb.Layouts.FooterComponent do
+  @moduledoc """
+  Component for rendering the application footer with navigation links and copyright information.
+  """
   use ElixirLearningAppWeb, :html
 
   def footer(assigns) do

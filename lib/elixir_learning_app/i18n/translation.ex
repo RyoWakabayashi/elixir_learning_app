@@ -1,4 +1,7 @@
 defmodule ElixirLearningApp.I18n.Translation do
+  @moduledoc """
+  Schema for storing translations for different locales, with content stored as a map.
+  """
   use Ecto.Schema
   import Ecto.Changeset
 
