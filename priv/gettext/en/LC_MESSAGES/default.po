@@ -10,31 +10,47 @@ msgid ""
 msgstr ""
 "Language: en\n"
 
-#: lib/elixir_learning_app_web/components/layouts/header_component.ex:24
+#: lib/elixir_learning_app_web/components/layouts/footer_component.ex:34
+#: lib/elixir_learning_app_web/components/layouts/header_component.ex:26
+#: lib/elixir_learning_app_web/components/layouts/header_component.ex:69
+#, elixir-autogen
 msgid "Home"
 msgstr "Home"
 
-#: lib/elixir_learning_app_web/components/layouts/header_component.ex:31
+#: lib/elixir_learning_app_web/components/layouts/footer_component.ex:42
+#: lib/elixir_learning_app_web/components/layouts/header_component.ex:32
+#: lib/elixir_learning_app_web/components/layouts/header_component.ex:75
+#, elixir-autogen
 msgid "Lessons"
 msgstr "Lessons"
 
+#: lib/elixir_learning_app_web/components/layouts/footer_component.ex:50
 #: lib/elixir_learning_app_web/components/layouts/header_component.ex:38
+#: lib/elixir_learning_app_web/components/layouts/header_component.ex:81
+#, elixir-autogen
 msgid "About"
 msgstr "About"
 
-#: lib/elixir_learning_app_web/components/layouts/header_component.ex:56
+#: lib/elixir_learning_app_web/components/layouts/header_component.ex:55
+#, elixir-autogen
 msgid "Open main menu"
 msgstr "Open main menu"
 
-#: lib/elixir_learning_app_web/components/layouts/header_component.ex:146
+#: lib/elixir_learning_app_web/components/layouts/footer_component.ex:86
+#: lib/elixir_learning_app_web/components/layouts/header_component.ex:148
+#, elixir-autogen
 msgid "Language"
 msgstr "Language"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/home_live.ex:16
+#, elixir-autogen
 msgid "Interactive Elixir Lessons"
 msgstr "Interactive Elixir Lessons"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/home_live.ex:28
+#: lib/elixir_learning_app_web/live/home_live.ex:36
+#: lib/elixir_learning_app_web/live/home_live.ex:44
+#, elixir-autogen
 msgid "Start Learning"
 msgstr "Start Learning"
 
@@ -58,190 +74,327 @@ msgstr "Next Lesson"
 msgid "Previous Lesson"
 msgstr "Previous Lesson"
 
-#: lib/elixir_learning_app_web/live/about_live.ex
+#: lib/elixir_learning_app_web/live/about_live.ex:17
+#, elixir-autogen
 msgid "About Interactive Elixir Lessons"
 msgstr "About Interactive Elixir Lessons"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:16
+#, elixir-autogen
 msgid "Elixir Lessons"
 msgstr "Elixir Lessons"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:18
+#, elixir-autogen
 msgid "Choose a lesson category to start learning Elixir"
 msgstr "Choose a lesson category to start learning Elixir"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:45
+#, elixir-autogen
 msgid "Start Lesson"
 msgstr "Start Lesson"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/home_live.ex:24
+#: lib/elixir_learning_app_web/live/lessons_live.ex:62
+#, elixir-autogen
 msgid "Elixir Basics"
 msgstr "Elixir Basics"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:63
+#, elixir-autogen
 msgid "Learn the fundamentals of Elixir programming"
 msgstr "Learn the fundamentals of Elixir programming"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/home_live.ex:32
+#: lib/elixir_learning_app_web/live/lessons_live.ex:67
+#, elixir-autogen
 msgid "Pattern Matching"
 msgstr "Pattern Matching"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:68
+#, elixir-autogen
 msgid "Master one of Elixir's most powerful features"
 msgstr "Master one of Elixir's most powerful features"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:72
+#, elixir-autogen
 msgid "Processes & OTP"
 msgstr "Processes & OTP"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:73
+#, elixir-autogen
 msgid "Learn about Elixir's concurrency model"
 msgstr "Learn about Elixir's concurrency model"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/components/layouts/footer_component.ex:78
+#: lib/elixir_learning_app_web/live/home_live.ex:40
+#: lib/elixir_learning_app_web/live/lessons_live.ex:77
+#, elixir-autogen
 msgid "Phoenix LiveView"
 msgstr "Phoenix LiveView"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:78
+#, elixir-autogen
 msgid "Build interactive web applications with Phoenix"
 msgstr "Build interactive web applications with Phoenix"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:88
+#, elixir-autogen
 msgid "Variables & Types"
 msgstr "Variables & Types"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:89
+#, elixir-autogen
 msgid "Learn about Elixir's basic data types"
 msgstr "Learn about Elixir's basic data types"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:95
+#, elixir-autogen
 msgid "Functions"
 msgstr "Functions"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:96
+#, elixir-autogen
 msgid "Define and use functions in Elixir"
 msgstr "Define and use functions in Elixir"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:102
+#, elixir-autogen
 msgid "Modules"
 msgstr "Modules"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:103
+#, elixir-autogen
 msgid "Organize your code with modules"
 msgstr "Organize your code with modules"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:109
+#, elixir-autogen
 msgid "Basic Pattern Matching"
 msgstr "Basic Pattern Matching"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:110
+#, elixir-autogen
 msgid "Introduction to pattern matching"
 msgstr "Introduction to pattern matching"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:116
+#, elixir-autogen
 msgid "Advanced Pattern Matching"
 msgstr "Advanced Pattern Matching"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:117
+#, elixir-autogen
 msgid "Complex patterns and guards"
 msgstr "Complex patterns and guards"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:123
+#, elixir-autogen
 msgid "Introduction to Processes"
 msgstr "Introduction to Processes"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:124
+#, elixir-autogen
 msgid "Learn about Elixir's lightweight processes"
 msgstr "Learn about Elixir's lightweight processes"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:130
+#, elixir-autogen
 msgid "GenServer"
 msgstr "GenServer"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:131
+#, elixir-autogen
 msgid "Build stateful server processes"
 msgstr "Build stateful server processes"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:137
+#, elixir-autogen
 msgid "LiveView Basics"
 msgstr "LiveView Basics"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:138
+#, elixir-autogen
 msgid "Introduction to Phoenix LiveView"
 msgstr "Introduction to Phoenix LiveView"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:144
+#, elixir-autogen
 msgid "LiveView Components"
 msgstr "LiveView Components"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:145
+#, elixir-autogen
 msgid "Build reusable LiveView components"
 msgstr "Build reusable LiveView components"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:157
+#, elixir-autogen
 msgid "Beginner"
 msgstr "Beginner"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:158
+#, elixir-autogen
 msgid "Easy"
 msgstr "Easy"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:159
+#, elixir-autogen
 msgid "Intermediate"
 msgstr "Intermediate"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:160
+#, elixir-autogen
 msgid "Advanced"
 msgstr "Advanced"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:161
+#, elixir-autogen
 msgid "Expert"
 msgstr "Expert"
 
-#: lib/elixir_learning_app_web/live/lessons_live.ex
+#: lib/elixir_learning_app_web/live/lessons_live.ex:162
+#, elixir-autogen
 msgid "Unknown"
 msgstr "Unknown"
 
-#: lib/elixir_learning_app_web/live/about_live.ex
+#: lib/elixir_learning_app_web/live/about_live.ex:27
+#, elixir-autogen
 msgid "Our Mission"
 msgstr "Our Mission"
 
-#: lib/elixir_learning_app_web/live/about_live.ex
+#: lib/elixir_learning_app_web/live/about_live.ex:29
+#, elixir-autogen
 msgid "Our mission is to make learning Elixir accessible, engaging, and effective. We believe that the best way to learn programming is by doing, which is why our platform allows you to write and execute code directly in your browser."
 msgstr "Our mission is to make learning Elixir accessible, engaging, and effective. We believe that the best way to learn programming is by doing, which is why our platform allows you to write and execute code directly in your browser."
 
-#: lib/elixir_learning_app_web/live/about_live.ex
+#: lib/elixir_learning_app_web/live/about_live.ex:34
+#, elixir-autogen
 msgid "Features"
 msgstr "Features"
 
-#: lib/elixir_learning_app_web/live/about_live.ex
+#: lib/elixir_learning_app_web/live/about_live.ex:36
+#, elixir-autogen
 msgid "Interactive code execution in your browser"
 msgstr "Interactive code execution in your browser"
 
-#: lib/elixir_learning_app_web/live/about_live.ex
+#: lib/elixir_learning_app_web/live/about_live.ex:37
+#, elixir-autogen
 msgid "Structured learning path from basics to advanced topics"
 msgstr "Structured learning path from basics to advanced topics"
 
-#: lib/elixir_learning_app_web/live/about_live.ex
+#: lib/elixir_learning_app_web/live/about_live.ex:38
+#, elixir-autogen
 msgid "Immediate feedback on your code"
 msgstr "Immediate feedback on your code"
 
-#: lib/elixir_learning_app_web/live/about_live.ex
+#: lib/elixir_learning_app_web/live/about_live.ex:39
+#, elixir-autogen
 msgid "Progress tracking to monitor your learning journey"
 msgstr "Progress tracking to monitor your learning journey"
 
-#: lib/elixir_learning_app_web/live/about_live.ex
+#: lib/elixir_learning_app_web/live/about_live.ex:40
+#, elixir-autogen
 msgid "Support for both English and Japanese languages"
 msgstr "Support for both English and Japanese languages"
 
-#: lib/elixir_learning_app_web/live/about_live.ex
+#: lib/elixir_learning_app_web/live/about_live.ex:43
+#, elixir-autogen
 msgid "Technology"
 msgstr "Technology"
 
-#: lib/elixir_learning_app_web/live/about_live.ex
+#: lib/elixir_learning_app_web/live/about_live.ex:45
+#, elixir-autogen
 msgid "This platform is built with Elixir and Phoenix LiveView, the same technologies you'll be learning about. We believe in using the tools we teach, and we hope this platform serves as an example of what you can build with these powerful technologies."
 msgstr "This platform is built with Elixir and Phoenix LiveView, the same technologies you'll be learning about. We believe in using the tools we teach, and we hope this platform serves as an example of what you can build with these powerful technologies."
 
-#: lib/elixir_learning_app_web/live/about_live.ex
+#: lib/elixir_learning_app_web/live/about_live.ex:22
+#, elixir-autogen
 msgid "Interactive Elixir Lessons is a platform designed to help you learn Elixir programming through hands-on, interactive exercises."
 msgstr "Interactive Elixir Lessons is a platform designed to help you learn Elixir programming through hands-on, interactive exercises."
+
+#: lib/elixir_learning_app_web/components/core_components.ex:483
+#, elixir-autogen, elixir-format
+msgid "Actions"
+msgstr ""
+
+#: lib/elixir_learning_app_web/components/core_components.ex:161
+#, elixir-autogen, elixir-format
+msgid "Attempting to reconnect"
+msgstr ""
+
+#: lib/elixir_learning_app_web/live/home_live.ex:42
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Build interactive web applications with Phoenix LiveView"
+msgstr "Build interactive web applications with Phoenix"
+
+#: lib/elixir_learning_app_web/components/layouts/footer_component.ex:68
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Elixir"
+msgstr "Elixir Basics"
+
+#: lib/elixir_learning_app_web/components/core_components.ex:152
+#, elixir-autogen, elixir-format
+msgid "Error!"
+msgstr ""
+
+#: lib/elixir_learning_app_web/components/core_components.ex:173
+#, elixir-autogen, elixir-format
+msgid "Hang in there while we get back on track"
+msgstr ""
+
+#: lib/elixir_learning_app_web/components/layouts/footer_component.ex:113
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Interactive Elixir Lessons. All rights reserved."
+msgstr "Interactive Elixir Lessons"
+
+#: lib/elixir_learning_app_web/live/home_live.ex:18
+#, elixir-autogen, elixir-format
+msgid "Learn Elixir programming through interactive, hands-on lessons"
+msgstr ""
+
+#: lib/elixir_learning_app_web/components/layouts/footer_component.ex:18
+#, elixir-autogen, elixir-format
+msgid "Learn Elixir programming through interactive, hands-on lessons."
+msgstr ""
+
+#: lib/elixir_learning_app_web/live/home_live.ex:34
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Master one of Elixir's most powerful features for elegant code"
+msgstr "Master one of Elixir's most powerful features"
+
+#: lib/elixir_learning_app_web/components/layouts/footer_component.ex:26
+#, elixir-autogen, elixir-format
+msgid "Navigation"
+msgstr ""
+
+#: lib/elixir_learning_app_web/components/layouts/footer_component.ex:58
+#, elixir-autogen, elixir-format
+msgid "Resources"
+msgstr ""
+
+#: lib/elixir_learning_app_web/components/core_components.ex:168
+#, elixir-autogen, elixir-format
+msgid "Something went wrong!"
+msgstr ""
+
+#: lib/elixir_learning_app_web/live/home_live.ex:26
+#, elixir-autogen, elixir-format
+msgid "Start your journey with the fundamentals of Elixir programming language"
+msgstr ""
+
+#: lib/elixir_learning_app_web/components/core_components.ex:151
+#, elixir-autogen, elixir-format
+msgid "Success!"
+msgstr ""
+
+#: lib/elixir_learning_app_web/components/core_components.ex:156
+#, elixir-autogen, elixir-format
+msgid "We can't find the internet"
+msgstr ""
+
+#: lib/elixir_learning_app_web/components/core_components.ex:77
+#: lib/elixir_learning_app_web/components/core_components.ex:131
+#, elixir-autogen, elixir-format
+msgid "close"
+msgstr ""

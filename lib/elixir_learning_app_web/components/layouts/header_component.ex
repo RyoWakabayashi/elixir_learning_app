@@ -13,30 +13,30 @@ defmodule ElixirLearningAppWeb.Layouts.HeaderComponent do
         <div class="flex justify-between h-16">
           <div class="flex">
             <div class="flex-shrink-0 flex items-center">
-              <a href="/" class="flex items-center">
+              <.link href={~p"/#{Gettext.get_locale(ElixirLearningAppWeb.Gettext)}"} class="flex items-center">
                 <img src={~p"/images/logo.svg"} alt="Elixir Learning App" class="h-8 w-8 text-brand" />
                 <span class="ml-2 text-xl font-bold text-brand">Elixir Learning</span>
-              </a>
+              </.link>
             </div>
             <nav class="hidden sm:ml-6 sm:flex sm:space-x-8" aria-label="Main navigation">
-              <a
-                href="/"
+              <.link
+                href={~p"/#{Gettext.get_locale(ElixirLearningAppWeb.Gettext)}"}
                 class="border-transparent text-gray-500 hover:border-brand hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors duration-200"
               >
                 {gettext("Home")}
-              </a>
-              <a
-                href="/lessons"
+              </.link>
+              <.link
+                href={~p"/#{Gettext.get_locale(ElixirLearningAppWeb.Gettext)}/lessons"}
                 class="border-transparent text-gray-500 hover:border-brand hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors duration-200"
               >
                 {gettext("Lessons")}
-              </a>
-              <a
-                href="/about"
+              </.link>
+              <.link
+                href={~p"/#{Gettext.get_locale(ElixirLearningAppWeb.Gettext)}/about"}
                 class="border-transparent text-gray-500 hover:border-brand hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors duration-200"
               >
                 {gettext("About")}
-              </a>
+              </.link>
             </nav>
           </div>
           <div class="hidden sm:ml-6 sm:flex sm:items-center">
@@ -58,28 +58,28 @@ defmodule ElixirLearningAppWeb.Layouts.HeaderComponent do
           </div>
         </div>
       </div>
-      
+
     <!-- Mobile menu, show/hide based on menu state. -->
       <div class="sm:hidden hidden" id="mobile-menu">
         <div class="pt-2 pb-3 space-y-1">
-          <a
-            href="/"
+          <.link
+            href={~p"/#{Gettext.get_locale(ElixirLearningAppWeb.Gettext)}"}
             class="bg-white border-transparent text-gray-500 hover:bg-gray-50 hover:border-brand hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium transition-colors duration-200"
           >
             {gettext("Home")}
-          </a>
-          <a
-            href="/lessons"
+          </.link>
+          <.link
+            href={~p"/#{Gettext.get_locale(ElixirLearningAppWeb.Gettext)}/lessons"}
             class="bg-white border-transparent text-gray-500 hover:bg-gray-50 hover:border-brand hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium transition-colors duration-200"
           >
             {gettext("Lessons")}
-          </a>
-          <a
-            href="/about"
+          </.link>
+          <.link
+            href={~p"/#{Gettext.get_locale(ElixirLearningAppWeb.Gettext)}/about"}
             class="bg-white border-transparent text-gray-500 hover:bg-gray-50 hover:border-brand hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium transition-colors duration-200"
           >
             {gettext("About")}
-          </a>
+          </.link>
         </div>
         <div class="pt-4 pb-3 border-t border-gray-200">
           <div class="mt-3 space-y-1">
@@ -115,10 +115,12 @@ defmodule ElixirLearningAppWeb.Layouts.HeaderComponent do
         aria-labelledby="language-menu-button"
         tabindex="-1"
         id="language-dropdown-menu"
+        phx-click-away={JS.hide(to: "#language-dropdown-menu")}
       >
         <div class="py-1" role="none">
           <a
-            href="?locale=en"
+            href="#"
+            onclick="switchLanguage('en')"
             class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 transition-colors duration-200"
             role="menuitem"
             tabindex="-1"
@@ -126,7 +128,8 @@ defmodule ElixirLearningAppWeb.Layouts.HeaderComponent do
             English
           </a>
           <a
-            href="?locale=ja"
+            href="#"
+            onclick="switchLanguage('ja')"
             class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 transition-colors duration-200"
             role="menuitem"
             tabindex="-1"
@@ -136,6 +139,33 @@ defmodule ElixirLearningAppWeb.Layouts.HeaderComponent do
         </div>
       </div>
     </div>
+
+    <script>
+      function switchLanguage(newLocale) {
+        // 現在のパスを取得
+        const path = window.location.pathname;
+
+        // パスを分解
+        const segments = path.split('/').filter(segment => segment.length > 0);
+
+        // 新しいパスを構築
+        let newPath;
+        if (segments.length === 0) {
+          // ルートパスの場合
+          newPath = '/' + newLocale;
+        } else if (segments[0] === 'en' || segments[0] === 'ja') {
+          // 最初のセグメントが言語の場合、それを置き換える
+          segments[0] = newLocale;
+          newPath = '/' + segments.join('/');
+        } else {
+          // 言語セグメントがない場合（通常はここには来ない）
+          newPath = '/' + newLocale + path;
+        }
+
+        // 新しいパスに遷移
+        window.location.href = newPath;
+      }
+    </script>
     """
   end
 
@@ -144,13 +174,15 @@ defmodule ElixirLearningAppWeb.Layouts.HeaderComponent do
     <div class="space-y-1 px-4">
       <p class="text-gray-500 text-sm font-medium">{gettext("Language")}</p>
       <a
-        href="?locale=en"
+        href="#"
+        onclick="switchLanguage('en')"
         class="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 transition-colors duration-200"
       >
         English
       </a>
       <a
-        href="?locale=ja"
+        href="#"
+        onclick="switchLanguage('ja')"
         class="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 transition-colors duration-200"
       >
         日本語
@@ -165,4 +197,6 @@ defmodule ElixirLearningAppWeb.Layouts.HeaderComponent do
       _ -> "English"
     end
   end
+
+  # 使用されていない関数を削除
 end

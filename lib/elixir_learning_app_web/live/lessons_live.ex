@@ -2,8 +2,9 @@ defmodule ElixirLearningAppWeb.LessonsLive do
   use ElixirLearningAppWeb, :live_view
 
   @impl true
-  def mount(_params, _session, socket) do
-    {:ok, assign(socket, page_title: "Lessons", lessons: sample_lessons())}
+  def mount(%{"locale" => locale} = _params, _session, socket) do
+    Gettext.put_locale(ElixirLearningAppWeb.Gettext, locale)
+    {:ok, assign(socket, page_title: "Lessons", lessons: sample_lessons(), locale: locale)}
   end
 
   @impl true

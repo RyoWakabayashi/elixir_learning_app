@@ -97,9 +97,15 @@ defmodule ElixirLearningAppWeb.Router do
   scope "/", ElixirLearningAppWeb do
     pipe_through :browser
 
-    live "/", HomeLive, :index
-    live "/lessons", LessonsLive, :index
-    live "/about", AboutLive, :index
+    # Default route redirects to preferred language
+    get "/", RedirectController, :redirect_to_language
+
+    # Language-specific routes
+    scope "/:locale" do
+      live "/", HomeLive, :index
+      live "/lessons", LessonsLive, :index
+      live "/about", AboutLive, :index
+    end
   end
 
   # Other scopes may use custom stacks.
