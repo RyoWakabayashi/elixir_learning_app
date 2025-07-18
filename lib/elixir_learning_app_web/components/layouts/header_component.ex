@@ -13,7 +13,10 @@ defmodule ElixirLearningAppWeb.Layouts.HeaderComponent do
         <div class="flex justify-between h-16">
           <div class="flex">
             <div class="flex-shrink-0 flex items-center">
-              <.link href={~p"/#{Gettext.get_locale(ElixirLearningAppWeb.Gettext)}"} class="flex items-center">
+              <.link
+                href={~p"/#{Gettext.get_locale(ElixirLearningAppWeb.Gettext)}"}
+                class="flex items-center"
+              >
                 <img src={~p"/images/logo.svg"} alt="Elixir Learning App" class="h-8 w-8 text-brand" />
                 <span class="ml-2 text-xl font-bold text-brand">Elixir Learning</span>
               </.link>
@@ -58,7 +61,7 @@ defmodule ElixirLearningAppWeb.Layouts.HeaderComponent do
           </div>
         </div>
       </div>
-
+      
     <!-- Mobile menu, show/hide based on menu state. -->
       <div class="sm:hidden hidden" id="mobile-menu">
         <div class="pt-2 pb-3 space-y-1">

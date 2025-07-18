@@ -15,8 +15,10 @@ defmodule ElixirLearningApp.Application do
       {Phoenix.PubSub, name: ElixirLearningApp.PubSub},
       # Start the Finch HTTP client for sending emails
       {Finch, name: ElixirLearningApp.Finch},
-      # Start a worker by calling: ElixirLearningApp.Worker.start_link(arg)
-      # {ElixirLearningApp.Worker, arg},
+      # Start the Registry for code execution sandboxes
+      {Registry, keys: :unique, name: ElixirLearningApp.CodeExecution.Registry},
+      # Start the code execution supervisor
+      ElixirLearningApp.CodeExecution.Supervisor,
       # Start to serve requests, typically the last entry
       ElixirLearningAppWeb.Endpoint
     ]

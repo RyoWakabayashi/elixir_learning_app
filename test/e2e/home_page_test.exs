@@ -22,7 +22,9 @@ defmodule ElixirLearningAppWeb.HomePageTest do
     conn
     |> visit("/en")
     # Verify welcome message
-    |> assert_has("main p", text: "Learn Elixir programming through interactive, hands-on lessons")
+    |> assert_has("main p",
+      text: "Learn Elixir programming through interactive, hands-on lessons"
+    )
   end
 
   test "navigation between pages works", %{conn: conn} do
@@ -51,7 +53,9 @@ defmodule ElixirLearningAppWeb.HomePageTest do
     conn
     |> visit("/en")
     |> assert_has("h1", text: "Interactive Elixir Lessons")
-    |> assert_has("main p", text: "Learn Elixir programming through interactive, hands-on lessons")
+    |> assert_has("main p",
+      text: "Learn Elixir programming through interactive, hands-on lessons"
+    )
 
     # 日本語のホームページを確認
     conn
