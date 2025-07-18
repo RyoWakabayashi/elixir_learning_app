@@ -1,18 +1,18 @@
 # Implementation Plan
 
-- [ ] 1. Set up project structure and core components
-  - [ ] 1.1 Create LiveView pages for main application layout
+- [x] 1. Set up project structure and core components
+  - [x] 1.1 Create LiveView pages for main application layout
     - Create root layout with language selector and navigation
     - Implement responsive design for desktop and tablet
     - _Requirements: 7.1_
 
-  - [ ] 1.2 Set up internationalization framework
+  - [x] 1.2 Set up internationalization framework
     - Configure Gettext with English and Japanese locales
     - Create translation files for UI elements
     - Implement locale detection and switching
     - _Requirements: 4.1, 4.2, 4.3_
 
-  - [ ] 1.3 Create database schema and migrations
+  - [x] 1.3 Create database schema and migrations
     - Create lessons table with required fields
     - Create user_progress table for tracking completion
     - Create translations table for multilingual content

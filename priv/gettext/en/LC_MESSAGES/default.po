@@ -1,0 +1,247 @@
+## "msgid"s in this file come from POT (.pot) files.
+##
+## Do not add, change, or remove `msgid`s manually here as
+## they're tied to the ones in the corresponding POT file
+## (with the same domain).
+##
+## Use `mix gettext.extract --merge` or `mix gettext.merge`
+## to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: en\n"
+
+#: lib/elixir_learning_app_web/components/layouts/header_component.ex:24
+msgid "Home"
+msgstr "Home"
+
+#: lib/elixir_learning_app_web/components/layouts/header_component.ex:31
+msgid "Lessons"
+msgstr "Lessons"
+
+#: lib/elixir_learning_app_web/components/layouts/header_component.ex:38
+msgid "About"
+msgstr "About"
+
+#: lib/elixir_learning_app_web/components/layouts/header_component.ex:56
+msgid "Open main menu"
+msgstr "Open main menu"
+
+#: lib/elixir_learning_app_web/components/layouts/header_component.ex:146
+msgid "Language"
+msgstr "Language"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Interactive Elixir Lessons"
+msgstr "Interactive Elixir Lessons"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Start Learning"
+msgstr "Start Learning"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Run Code"
+msgstr "Run Code"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Reset"
+msgstr "Reset"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Submit Solution"
+msgstr "Submit Solution"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Next Lesson"
+msgstr "Next Lesson"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Previous Lesson"
+msgstr "Previous Lesson"
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "About Interactive Elixir Lessons"
+msgstr "About Interactive Elixir Lessons"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Elixir Lessons"
+msgstr "Elixir Lessons"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Choose a lesson category to start learning Elixir"
+msgstr "Choose a lesson category to start learning Elixir"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Start Lesson"
+msgstr "Start Lesson"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Elixir Basics"
+msgstr "Elixir Basics"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Learn the fundamentals of Elixir programming"
+msgstr "Learn the fundamentals of Elixir programming"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Pattern Matching"
+msgstr "Pattern Matching"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Master one of Elixir's most powerful features"
+msgstr "Master one of Elixir's most powerful features"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Processes & OTP"
+msgstr "Processes & OTP"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Learn about Elixir's concurrency model"
+msgstr "Learn about Elixir's concurrency model"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Phoenix LiveView"
+msgstr "Phoenix LiveView"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Build interactive web applications with Phoenix"
+msgstr "Build interactive web applications with Phoenix"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Variables & Types"
+msgstr "Variables & Types"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Learn about Elixir's basic data types"
+msgstr "Learn about Elixir's basic data types"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Functions"
+msgstr "Functions"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Define and use functions in Elixir"
+msgstr "Define and use functions in Elixir"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Modules"
+msgstr "Modules"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Organize your code with modules"
+msgstr "Organize your code with modules"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Basic Pattern Matching"
+msgstr "Basic Pattern Matching"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Introduction to pattern matching"
+msgstr "Introduction to pattern matching"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Advanced Pattern Matching"
+msgstr "Advanced Pattern Matching"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Complex patterns and guards"
+msgstr "Complex patterns and guards"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Introduction to Processes"
+msgstr "Introduction to Processes"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Learn about Elixir's lightweight processes"
+msgstr "Learn about Elixir's lightweight processes"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "GenServer"
+msgstr "GenServer"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Build stateful server processes"
+msgstr "Build stateful server processes"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "LiveView Basics"
+msgstr "LiveView Basics"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Introduction to Phoenix LiveView"
+msgstr "Introduction to Phoenix LiveView"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "LiveView Components"
+msgstr "LiveView Components"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Build reusable LiveView components"
+msgstr "Build reusable LiveView components"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Beginner"
+msgstr "Beginner"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Easy"
+msgstr "Easy"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Intermediate"
+msgstr "Intermediate"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Advanced"
+msgstr "Advanced"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Expert"
+msgstr "Expert"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Unknown"
+msgstr "Unknown"
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "Our Mission"
+msgstr "Our Mission"
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "Our mission is to make learning Elixir accessible, engaging, and effective. We believe that the best way to learn programming is by doing, which is why our platform allows you to write and execute code directly in your browser."
+msgstr "Our mission is to make learning Elixir accessible, engaging, and effective. We believe that the best way to learn programming is by doing, which is why our platform allows you to write and execute code directly in your browser."
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "Features"
+msgstr "Features"
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "Interactive code execution in your browser"
+msgstr "Interactive code execution in your browser"
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "Structured learning path from basics to advanced topics"
+msgstr "Structured learning path from basics to advanced topics"
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "Immediate feedback on your code"
+msgstr "Immediate feedback on your code"
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "Progress tracking to monitor your learning journey"
+msgstr "Progress tracking to monitor your learning journey"
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "Support for both English and Japanese languages"
+msgstr "Support for both English and Japanese languages"
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "Technology"
+msgstr "Technology"
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "This platform is built with Elixir and Phoenix LiveView, the same technologies you'll be learning about. We believe in using the tools we teach, and we hope this platform serves as an example of what you can build with these powerful technologies."
+msgstr "This platform is built with Elixir and Phoenix LiveView, the same technologies you'll be learning about. We believe in using the tools we teach, and we hope this platform serves as an example of what you can build with these powerful technologies."
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "Interactive Elixir Lessons is a platform designed to help you learn Elixir programming through hands-on, interactive exercises."
+msgstr "Interactive Elixir Lessons is a platform designed to help you learn Elixir programming through hands-on, interactive exercises."

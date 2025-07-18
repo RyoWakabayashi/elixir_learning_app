@@ -1,0 +1,247 @@
+## "msgid"s in this file come from POT (.pot) files.
+##
+## Do not add, change, or remove `msgid`s manually here as
+## they're tied to the ones in the corresponding POT file
+## (with the same domain).
+##
+## Use `mix gettext.extract --merge` or `mix gettext.merge`
+## to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: ja\n"
+
+#: lib/elixir_learning_app_web/components/layouts/header_component.ex:24
+msgid "Home"
+msgstr "ホーム"
+
+#: lib/elixir_learning_app_web/components/layouts/header_component.ex:31
+msgid "Lessons"
+msgstr "レッスン"
+
+#: lib/elixir_learning_app_web/components/layouts/header_component.ex:38
+msgid "About"
+msgstr "概要"
+
+#: lib/elixir_learning_app_web/components/layouts/header_component.ex:56
+msgid "Open main menu"
+msgstr "メインメニューを開く"
+
+#: lib/elixir_learning_app_web/components/layouts/header_component.ex:146
+msgid "Language"
+msgstr "言語"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Interactive Elixir Lessons"
+msgstr "インタラクティブ Elixir レッスン"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Start Learning"
+msgstr "学習を始める"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Run Code"
+msgstr "コードを実行"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Reset"
+msgstr "リセット"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Submit Solution"
+msgstr "解答を提出"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Next Lesson"
+msgstr "次のレッスン"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Previous Lesson"
+msgstr "前のレッスン"
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "About Interactive Elixir Lessons"
+msgstr "インタラクティブ Elixir レッスンについて"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Elixir Lessons"
+msgstr "Elixir レッスン"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Choose a lesson category to start learning Elixir"
+msgstr "Elixirの学習を始めるためのレッスンカテゴリを選択してください"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Start Lesson"
+msgstr "レッスンを始める"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Elixir Basics"
+msgstr "Elixir の基礎"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Learn the fundamentals of Elixir programming"
+msgstr "Elixir プログラミングの基礎を学ぶ"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Pattern Matching"
+msgstr "パターンマッチング"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Master one of Elixir's most powerful features"
+msgstr "Elixir の最も強力な機能の一つをマスターする"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Processes & OTP"
+msgstr "プロセスと OTP"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Learn about Elixir's concurrency model"
+msgstr "Elixir の並行処理モデルについて学ぶ"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Phoenix LiveView"
+msgstr "Phoenix LiveView"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Build interactive web applications with Phoenix"
+msgstr "Phoenix でインタラクティブなウェブアプリケーションを構築する"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Variables & Types"
+msgstr "変数と型"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Learn about Elixir's basic data types"
+msgstr "Elixir の基本的なデータ型について学ぶ"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Functions"
+msgstr "関数"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Define and use functions in Elixir"
+msgstr "Elixir で関数を定義して使用する"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Modules"
+msgstr "モジュール"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Organize your code with modules"
+msgstr "モジュールでコードを整理する"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Basic Pattern Matching"
+msgstr "基本的なパターンマッチング"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Introduction to pattern matching"
+msgstr "パターンマッチングの紹介"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Advanced Pattern Matching"
+msgstr "高度なパターンマッチング"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Complex patterns and guards"
+msgstr "複雑なパターンとガード"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Introduction to Processes"
+msgstr "プロセスの紹介"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Learn about Elixir's lightweight processes"
+msgstr "Elixir の軽量プロセスについて学ぶ"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "GenServer"
+msgstr "GenServer"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Build stateful server processes"
+msgstr "ステートフルなサーバープロセスを構築する"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "LiveView Basics"
+msgstr "LiveView の基礎"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Introduction to Phoenix LiveView"
+msgstr "Phoenix LiveView の紹介"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "LiveView Components"
+msgstr "LiveView コンポーネント"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Build reusable LiveView components"
+msgstr "再利用可能な LiveView コンポーネントを構築する"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Beginner"
+msgstr "初心者"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Easy"
+msgstr "簡単"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Intermediate"
+msgstr "中級"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Advanced"
+msgstr "上級"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Expert"
+msgstr "エキスパート"
+
+#: lib/elixir_learning_app_web/live/lessons_live.ex
+msgid "Unknown"
+msgstr "不明"
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "Our Mission"
+msgstr "私たちの使命"
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "Our mission is to make learning Elixir accessible, engaging, and effective. We believe that the best way to learn programming is by doing, which is why our platform allows you to write and execute code directly in your browser."
+msgstr "私たちの使命は、Elixirの学習をアクセスしやすく、魅力的で効果的なものにすることです。プログラミングを学ぶ最良の方法は実践を通じてであると考えており、そのため当プラットフォームではブラウザ上で直接コードを書いて実行することができます。"
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "Features"
+msgstr "特徴"
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "Interactive code execution in your browser"
+msgstr "ブラウザ上でのインタラクティブなコード実行"
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "Structured learning path from basics to advanced topics"
+msgstr "基礎から応用までの体系的な学習パス"
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "Immediate feedback on your code"
+msgstr "コードに対する即時フィードバック"
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "Progress tracking to monitor your learning journey"
+msgstr "学習の進捗を追跡する機能"
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "Support for both English and Japanese languages"
+msgstr "英語と日本語の両方に対応"
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "Technology"
+msgstr "技術"
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "This platform is built with Elixir and Phoenix LiveView, the same technologies you'll be learning about. We believe in using the tools we teach, and we hope this platform serves as an example of what you can build with these powerful technologies."
+msgstr "このプラットフォームは、学習対象となるElixirとPhoenix LiveViewで構築されています。私たちは教える技術を自ら使用することを信条としており、このプラットフォームがこれらの強力な技術で何が構築できるかの一例となることを願っています。"
+
+#: lib/elixir_learning_app_web/live/about_live.ex
+msgid "Interactive Elixir Lessons is a platform designed to help you learn Elixir programming through hands-on, interactive exercises."
+msgstr "インタラクティブ Elixir レッスンは、実践的でインタラクティブな演習を通じてElixirプログラミングを学ぶためのプラットフォームです。"

@@ -8,6 +8,69 @@ defmodule ElixirLearningAppWeb.Router do
     plug :put_root_layout, html: {ElixirLearningAppWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug :set_locale
+  end
+
+  # Set the locale based on the "locale" query parameter, session, or browser preference
+  defp set_locale(conn, _opts) do
+    # Get supported locales from config
+    supported_locales =
+      Application.get_env(:elixir_learning_app, ElixirLearningAppWeb.Gettext)[:locales] ||
+        ["en", "ja"]
+
+    default_locale =
+      Application.get_env(:elixir_learning_app, ElixirLearningAppWeb.Gettext)[:default_locale] ||
+        "en"
+
+    # Check if locale is provided in the query parameters
+    locale =
+      cond do
+        # First priority: URL parameter
+        conn.params["locale"] && conn.params["locale"] in supported_locales ->
+          conn.params["locale"]
+
+        # Second priority: Session
+        get_session(conn, :locale) && get_session(conn, :locale) in supported_locales ->
+          get_session(conn, :locale)
+
+        # Third priority: Browser Accept-Language header
+        true ->
+          # Extract Accept-Language header and parse it
+          accept_language =
+            List.first(Plug.Conn.get_req_header(conn, "accept-language") || []) || ""
+
+          # Parse the Accept-Language header to get preferred languages
+          preferred_locales =
+            accept_language
+            |> String.split(",")
+            |> Enum.map(fn lang ->
+              case String.split(lang, ";") do
+                [lang_code | _] -> String.trim(lang_code)
+                _ -> nil
+              end
+            end)
+            |> Enum.reject(&is_nil/1)
+            |> Enum.map(fn lang ->
+              # Handle both "ja-JP" format and "ja" format
+              case String.split(lang, "-") do
+                [lang_code | _] -> lang_code
+                _ -> lang
+              end
+            end)
+
+          # Find the first supported locale from the browser preferences
+          Enum.find(preferred_locales, default_locale, fn lang ->
+            lang in supported_locales
+          end)
+      end
+
+    # Set the Gettext locale
+    Gettext.put_locale(ElixirLearningAppWeb.Gettext, locale)
+
+    # Store in session and assign for templates
+    conn
+    |> put_session(:locale, locale)
+    |> assign(:locale, locale)
   end
 
   pipeline :api do
@@ -17,7 +80,9 @@ defmodule ElixirLearningAppWeb.Router do
   scope "/", ElixirLearningAppWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", HomeLive, :index
+    live "/lessons", LessonsLive, :index
+    live "/about", AboutLive, :index
   end
 
   # Other scopes may use custom stacks.

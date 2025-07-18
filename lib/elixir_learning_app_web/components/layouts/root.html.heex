@@ -1,17 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" class="[scrollbar-gutter:stable]">
+<html lang={assigns[:locale] || "en"} class="[scrollbar-gutter:stable]">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content={get_csrf_token()} />
-    <.live_title default="ElixirLearningApp" suffix=" · Phoenix Framework">
+    <.live_title default="Interactive Elixir Lessons" suffix=" · Learn Elixir">
       {assigns[:page_title]}
     </.live_title>
     <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
     <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
     </script>
+    <!-- Responsive meta tags -->
+    <meta
+      name="description"
+      content="Interactive Elixir Lessons - Learn Elixir programming through interactive, hands-on lessons"
+    />
+    <meta name="theme-color" content="#4f46e5" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href={~p"/favicon.ico"} />
   </head>
-  <body class="bg-white">
-    {@inner_content}
+  <body class="bg-gray-50 min-h-screen flex flex-col antialiased text-gray-800">
+    <div class="flex flex-col min-h-screen">
+      {@inner_content}
+    </div>
   </body>
 </html>

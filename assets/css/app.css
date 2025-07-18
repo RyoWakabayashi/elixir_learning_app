@@ -3,3 +3,37 @@
 @import "tailwindcss/utilities";
 
 /* This file is for your main application CSS */
+
+/* Custom styles for the Interactive Elixir Lessons application */
+@layer components {
+  /* Active navigation link styles */
+  .nav-link-active {
+    @apply border-brand text-gray-900 border-b-2;
+  }
+  
+  /* Custom focus styles */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2;
+  }
+  
+  /* Custom button styles */
+  .btn-primary {
+    @apply bg-brand hover:bg-brand/90 text-white rounded-md px-4 py-2 font-medium transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 rounded-md px-4 py-2 font-medium transition-colors duration-200;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .mobile-menu-open {
+    @apply overflow-hidden;
+  }
+}
+
+/* Smooth scrolling for the entire site */
+html {
+  scroll-behavior: smooth;
+}

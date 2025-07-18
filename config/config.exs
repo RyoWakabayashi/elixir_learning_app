@@ -61,6 +61,11 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+# Configure Gettext
+config :elixir_learning_app, ElixirLearningAppWeb.Gettext,
+  default_locale: "en",
+  locales: ["en", "ja"]
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{config_env()}.exs"

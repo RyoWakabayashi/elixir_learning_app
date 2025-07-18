@@ -10,7 +10,8 @@ defmodule ElixirLearningApp.Application do
     children = [
       ElixirLearningAppWeb.Telemetry,
       ElixirLearningApp.Repo,
-      {DNSCluster, query: Application.get_env(:elixir_learning_app, :dns_cluster_query) || :ignore},
+      {DNSCluster,
+       query: Application.get_env(:elixir_learning_app, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: ElixirLearningApp.PubSub},
       # Start the Finch HTTP client for sending emails
       {Finch, name: ElixirLearningApp.Finch},
