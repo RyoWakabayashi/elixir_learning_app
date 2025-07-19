@@ -1,0 +1,12 @@
+{
+  "name": "elixir_learning_app",
+  "version": "1.0.0",
+  "description": "Interactive Elixir Learning Application",
+  "main": "js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "monaco-editor": "^0.47.0"
+  }
+}

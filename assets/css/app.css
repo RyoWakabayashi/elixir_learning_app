@@ -1,6 +1,8 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import "./code_editor.css";
+@import "./code_output.css";
 
 /* This file is for your main application CSS */
 

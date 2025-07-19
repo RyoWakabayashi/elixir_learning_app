@@ -1,0 +1,152 @@
+.code-output-container {
+  width: 100%;
+  height: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: auto;
+  background-color: #f8f8f8;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header with status and execution time */
+.code-output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.code-output-status-success {
+  color: #10b981;
+  background-color: rgba(16, 185, 129, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.code-output-status-error {
+  color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.code-output-time {
+  color: #6b7280;
+  font-size: 0.75rem;
+}
+
+/* Content area */
+.code-output-content {
+  padding: 1rem;
+  overflow: auto;
+  flex: 1;
+}
+
+/* Empty state */
+.code-output-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Result output */
+.code-output-result {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.code-output-result pre {
+  margin: 0;
+  padding: 0;
+  color: #10b981; /* Green color for success */
+}
+
+/* Error output */
+.code-output-error {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: #ef4444; /* Red color for errors */
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Error type highlighting */
+.code-output-error-type {
+  font-weight: bold;
+  color: #dc2626; /* Darker red for error types */
+  background-color: rgba(239, 68, 68, 0.15);
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+}
+
+/* Line number highlighting in errors */
+.code-output-line-number {
+  font-weight: bold;
+  color: #f87171; /* Lighter red for line numbers */
+  background-color: rgba(239, 68, 68, 0.1);
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  cursor: pointer; /* Indicate it's clickable for future functionality */
+}
+
+/* Code snippet in error messages */
+.code-output-snippet {
+  background-color: #1f2937;
+  color: #e5e7eb;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  margin: 0.5rem 0;
+  overflow-x: auto;
+}
+
+/* Loading indicator */
+.code-output-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #6b7280;
+}
+
+.code-output-loading-spinner {
+  border: 3px solid rgba(107, 114, 128, 0.3);
+  border-radius: 50%;
+  border-top: 3px solid #3b82f6; /* Blue color for spinner */
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .code-output-container {
+    height: 200px;
+  }
+}
+
+/* Ensure the output takes full height when in a flex container */
+.code-output-fullheight {
+  flex: 1;
+  min-height: 300px;
+}

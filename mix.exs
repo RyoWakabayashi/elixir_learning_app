@@ -59,6 +59,7 @@ defmodule ElixirLearningApp.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.5"},
+      {:briefly, "~> 0.4"},
       {:phoenix_test, "~> 0.5", only: :test, runtime: false},
       {:phoenix_test_playwright, "~> 0.5", only: :test, runtime: false},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false}

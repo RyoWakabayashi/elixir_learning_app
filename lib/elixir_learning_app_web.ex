@@ -89,6 +89,8 @@ defmodule ElixirLearningAppWeb do
       import Phoenix.HTML
       # Core UI components
       import ElixirLearningAppWeb.CoreComponents
+      # Code Editor component
+      import ElixirLearningAppWeb.Components.CodeEditor
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS

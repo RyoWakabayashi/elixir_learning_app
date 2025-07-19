@@ -106,6 +106,11 @@ defmodule ElixirLearningAppWeb.Router do
       live "/lessons", LessonsLive, :index
       live "/about", AboutLive, :index
     end
+
+    # Development routes (not language-specific)
+    if Application.compile_env(:elixir_learning_app, :dev_routes) do
+      live "/code-editor-demo", CodeEditorDemoLive, :index
+    end
   end
 
   # Other scopes may use custom stacks.
