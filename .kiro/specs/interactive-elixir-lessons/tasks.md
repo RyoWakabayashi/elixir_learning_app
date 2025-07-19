@@ -43,32 +43,32 @@
     - Create loading indicators for execution
     - _Requirements: 1.1, 1.2, 7.3_
 
-- [ ] 3. Implement lesson system
-  - [ ] 3.1 Create lesson repository service
+- [x] 3. Implement lesson system
+  - [x] 3.1 Create lesson repository service
     - Implement CRUD operations for lessons
     - Add methods for retrieving lessons by category and difficulty
     - Create functions for lesson sequencing (next/previous)
     - _Requirements: 2.1, 2.2, 2.5_
 
-  - [ ] 3.2 Implement lesson content management
+  - [x] 3.2 Implement lesson content management
     - Create structured format for lesson content
     - Support embedding code snippets and formatted text
     - Add support for lesson versioning
     - _Requirements: 6.1, 6.2, 6.3_
 
-  - [ ] 3.3 Create lesson list view
+  - [x] 3.3 Create lesson list view
     - Implement categorized lesson display
     - Add filtering by difficulty and category
     - Show completion status for each lesson
     - _Requirements: 2.1, 2.5_
 
-  - [ ] 3.4 Create lesson view component
+  - [x] 3.4 Create lesson view component
     - Implement split view with instructions and code editor
     - Add resizable panels for better user experience
     - Create navigation between lessons
     - _Requirements: 2.2, 5.5, 7.5_
 
-  - [ ] 3.5 Implement lesson content translation
+  - [x] 3.5 Implement lesson content translation
     - Create system for translating lesson content
     - Ensure code examples work across languages
     - Add fallback to English for missing translations

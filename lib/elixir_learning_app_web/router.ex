@@ -104,6 +104,7 @@ defmodule ElixirLearningAppWeb.Router do
     scope "/:locale" do
       live "/", HomeLive, :index
       live "/lessons", LessonsLive, :index
+      live "/lessons/:slug", LessonLive, :show
       live "/about", AboutLive, :index
     end
 
